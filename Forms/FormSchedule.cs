@@ -15,22 +15,18 @@ namespace WindowsFormsApp2
 
     public partial class FormSchedule : Form
     {
-
+        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public DataClassesDataContext dc;
         public FormSchedule()
         {
             InitializeComponent();
-
+            dc = new DataClassesDataContext(ConnectionString);
         }
-        public SqlConnection sqlConnection2 = null;
-        public SqlDataAdapter SqlDataAdapter2 = null;
-        public DataTable table2 = null;
+       
 
         private void рассписаниеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            table2.Clear();
-            SqlDataAdapter2.Fill(table2);
-            dataGridView1.DataSource = table2;
- 
+
 
         }
 
@@ -46,10 +42,8 @@ namespace WindowsFormsApp2
 
         private void FormSchedule_Load(object sender, EventArgs e)
         {
-   sqlConnection2 = new SqlConnection(@"Data Source=WIN-ER4GG7E4229\SQLEXPRESS;Initial Catalog=LogikDatabase;Integrated Security=True");
-            sqlConnection2.Open();
-            SqlDataAdapter2 = new SqlDataAdapter("SELECT * FROM Schedule", sqlConnection2);
-            table2 = new DataTable();
+           
+            bindingSource1.DataSource = dc.Schedule;
         }
 
         private void билетНаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,6 +60,11 @@ namespace WindowsFormsApp2
         private void button4_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void оформитьЗаказToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

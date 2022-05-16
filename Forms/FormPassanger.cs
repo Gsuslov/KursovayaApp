@@ -7,61 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
 
 namespace WindowsFormsApp2
 {
-    public partial class FormTicket : Form
+    public partial class FormPassanger : Form
     {
         public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
         public DataClassesDataContext dc;
-        public FormTicket()
+        public FormPassanger()
         {
             InitializeComponent();
             dc = new DataClassesDataContext(ConnectionString);
         }
 
-        private void FormTicket_Load(object sender, EventArgs e)
-        {
-
-            bindingSourceTicket.DataSource = dc.Ticket;
-            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void списокПассажирскихПоездовToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormPassanger FAdd = new FormPassanger();
-            FAdd.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormPassanger_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = dc.Passanger;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
         private void customButton1_Click(object sender, EventArgs e)
         {
+
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
                 dataGridView1.Rows[i].Selected = false;
@@ -75,9 +69,31 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            FormAddPassanger FaddPas = new FormAddPassanger();
+            FaddPas.ShowDialog();
+        }
+
+        private void customButton4_Click(object sender, EventArgs e)
+        {
+          //  dc.Passanger.DeleteAllOnSubmit(dc.Passanger.Where(X=>X.Id == dataGridView1.Rows.Add());
         }
     }
 }

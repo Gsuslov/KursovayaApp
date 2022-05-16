@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="C:\USERS\ГЕОРГИЙ\SOURCE\REPOS\KURSOVAYA\KURSOVAYA\DATABASE1.MDF" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\ГЕОРГИЙ\SOURCE\REPOS\KURSOVAYA\KURSOVAYA\DATABASE1.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="Kursovaya.Properties.Settings" SettingsPropertyName="C__USERS_ГЕОРГИЙ_SOURCE_REPOS_KURSOVAYA_KURSOVAYA_DATABASE1_MDFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cargo" Member="Cargo">
+    <Type Name="Cargo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Weight" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CargoPlace" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="FlightNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Schedule_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CargoName" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Customer_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Wagon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Schedule_Cargo" Member="Schedule" ThisKey="Schedule_Id" OtherKey="Id" Type="Schedule" IsForeignKey="true" />
+      <Association Name="Customer_Cargo" Member="Customer" ThisKey="Customer_Id" OtherKey="Id" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customer">
+    <Type Name="Customer">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FIO" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Product" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Payment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Customer_Cargo" Member="Cargo" ThisKey="Id" OtherKey="Customer_Id" Type="Cargo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Schedule" Member="Schedule">
+    <Type Name="Schedule">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Train_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WhereFrom" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Whiter" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Departure" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ArrivalTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Schedule_Cargo" Member="Cargo" ThisKey="Id" OtherKey="Schedule_Id" Type="Cargo" />
+      <Association Name="Schedule_Ticket" Member="Ticket" ThisKey="Id" OtherKey="Schedule_Id" Type="Ticket" />
+      <Association Name="TRAINS_Schedule" Member="TRAINS" ThisKey="Train_Id" OtherKey="Id" Type="TRAINS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRAINS" Member="TRAINS">
+    <Type Name="TRAINS">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NChar(14)" CanBeNull="true" />
+      <Column Name="AllPlaces" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TRAINS_Schedule" Member="Schedule" ThisKey="Id" OtherKey="Train_Id" Type="Schedule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Passanger" Member="Passanger">
+    <Type Name="Passanger">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FIO" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Passport" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Association Name="Passanger_Ticket" Member="Ticket" ThisKey="Id" OtherKey="Passanger_Id" Type="Ticket" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ticket" Member="Ticket">
+    <Type Name="Ticket">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FlightNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Place" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Schedule_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Passanger_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Schedule_Ticket" Member="Schedule" ThisKey="Schedule_Id" OtherKey="Id" Type="Schedule" IsForeignKey="true" />
+      <Association Name="Passanger_Ticket" Member="Passanger" ThisKey="Passanger_Id" OtherKey="Id" Type="Passanger" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

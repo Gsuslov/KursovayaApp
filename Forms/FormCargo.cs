@@ -13,12 +13,12 @@ namespace WindowsFormsApp2
 {
     public partial class FormCargo : Form
     {
-        public SqlConnection sqlConnection4 = null;
-        public SqlDataAdapter SqlDataAdapter4 = null;
-        public DataTable table4 = null;
+        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public DataClassesDataContext dc;
         public FormCargo()
         {
             InitializeComponent();
+            dc = new DataClassesDataContext(ConnectionString);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -28,22 +28,22 @@ namespace WindowsFormsApp2
 
         private void списокПассажирскихПоездовToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            table4.Clear();
-            SqlDataAdapter4.Fill(table4);
-            dataGridView1.DataSource = table4;
+      
         }
 
         private void FormCargo_Load(object sender, EventArgs e)
         {
-            sqlConnection4 = new SqlConnection(@"Data Source=WIN-ER4GG7E4229\SQLEXPRESS;Initial Catalog=LogikDatabase;Integrated Security=True");
-            sqlConnection4.Open();
-            SqlDataAdapter4 = new SqlDataAdapter("SELECT * FROM Cargo", sqlConnection4);
-            table4 = new DataTable();
+            dataGridView1.DataSource = dc.Cargo;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -14,31 +14,22 @@ namespace WindowsFormsApp2
 {
     public partial class TrainForm : Form
     {
-        public SqlConnection sqlConnection = null;
-        public SqlDataAdapter SqlDataAdapter = null;
-        public DataTable table = null;
+        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public DataClassesDataContext dc;
         public TrainForm()
         {
             InitializeComponent();
-            
+            dc = new DataClassesDataContext(ConnectionString);
         }
 
         private void fKToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            table.Clear();
-            SqlDataAdapter.Fill(table);
-            dataGridView1.DataSource = table;
+            
         }
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "database3DataSet1.Trains". При необходимости она может быть перемещена или удалена.
-            
-            sqlConnection = new SqlConnection(@"Data Source=WIN-ER4GG7E4229\SQLEXPRESS;Initial Catalog=LogikDatabase;Integrated Security=True");
-            sqlConnection.Open();
-            SqlDataAdapter = new SqlDataAdapter("SELECT * FROM Trains", sqlConnection);
-            table = new DataTable();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            dataGridView1.DataSource = dc.TRAINS;  
 
         }
 
@@ -190,12 +181,37 @@ namespace WindowsFormsApp2
         private void поискПоКатегориямToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            this.panel3.Visible = true;
+          
         }
 
         private void customButton6_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            break;
+                        }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

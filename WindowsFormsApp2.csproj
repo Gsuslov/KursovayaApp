@@ -9,13 +9,14 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp2</RootNamespace>
     <AssemblyName>WindowsFormsApp2</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -88,7 +89,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -96,6 +99,7 @@
       <HintPath>packages\System.Collections.Immutable.6.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -144,27 +148,43 @@
     <Compile Include="Clauses\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Database3DataSet.Designer.cs">
+    <Compile Include="DataClasses.cs">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses.designer.cs">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Database3DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Database3DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database3DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormAdd.cs">
+    <Compile Include="Forms\FormAddPassanger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormAdd.Designer.cs">
-      <DependentUpon>FormAdd.cs</DependentUpon>
+    <Compile Include="Forms\FormAddPassanger.Designer.cs">
+      <DependentUpon>FormAddPassanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPassanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPassanger.Designer.cs">
+      <DependentUpon>FormPassanger.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormCargo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormCargo.Designer.cs">
       <DependentUpon>FormCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCustomer.Designer.cs">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormTicket.cs">
       <SubType>Form</SubType>
@@ -185,19 +205,31 @@
       <DependentUpon>FormSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Linq.cs" />
-    <Compile Include="Forms\TrainForm.cs">
+    <Compile Include="Forms\FormTrain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\TrainForm.Designer.cs">
-      <DependentUpon>TrainForm.cs</DependentUpon>
+    <Compile Include="Forms\FormTrain.Designer.cs">
+      <DependentUpon>FormTrain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FormAdd.resx">
-      <DependentUpon>FormAdd.cs</DependentUpon>
+    <None Include="DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\FormAddPassanger.resx">
+      <DependentUpon>FormAddPassanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPassanger.resx">
+      <DependentUpon>FormPassanger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCargo.resx">
       <DependentUpon>FormCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCustomer.resx">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -208,8 +240,8 @@
     <EmbeddedResource Include="Forms\FormTicket.resx">
       <DependentUpon>FormTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TrainForm.resx">
-      <DependentUpon>TrainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormTrain.resx">
+      <DependentUpon>FormTrain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,48 +251,23 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Database3DataSet.xsc">
-      <DependentUpon>Database3DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database3DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database3DataSet.Designer.cs</LastGenOutput>
+    <None Include="DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Database3DataSet.xss">
-      <DependentUpon>Database3DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database3DataSet1.xsc">
-      <DependentUpon>Database3DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Database3DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database3DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database3DataSet1.xss">
-      <DependentUpon>Database3DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
-    <None Include="LinqToDB.Templates\DataModel.ttinclude" />
-    <None Include="LinqToDB.Templates\EditableObject.ttinclude" />
-    <None Include="LinqToDB.Templates\Equatable.ttinclude" />
-    <None Include="LinqToDB.Templates\Humanizer.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.PostgreSQL.Tools.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.PostgreSQL.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.Tools.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.ttinclude" />
-    <None Include="LinqToDB.Templates\MultipleFiles.ttinclude" />
-    <None Include="LinqToDB.Templates\NotifyDataErrorInfo.ttinclude" />
-    <None Include="LinqToDB.Templates\NotifyPropertyChanged.ttinclude" />
-    <None Include="LinqToDB.Templates\ObsoleteAttributes.ttinclude" />
-    <None Include="LinqToDB.Templates\PluralizationService.ttinclude" />
-    <None Include="LinqToDB.Templates\T4Model.ttinclude" />
-    <None Include="LinqToDB.Templates\Validation.ttinclude" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Cargo.datasource" />
+    <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\FormCargo.datasource" />
+    <None Include="Properties\DataSources\Passanger.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Schedule.datasource" />
+    <None Include="Properties\DataSources\Ticket.datasource" />
+    <None Include="Properties\DataSources\TRAINS.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp2.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp2.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
@@ -277,9 +284,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LinqToDB.Templates\CopyMe.PostgreSQL.tt.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -294,7 +298,18 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.1\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.1\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
