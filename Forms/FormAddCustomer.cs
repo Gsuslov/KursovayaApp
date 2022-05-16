@@ -12,7 +12,7 @@ namespace WindowsFormsApp2
 {
     public partial class FormAddCustomer : Form
     {
-        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public string ConnectionString = Program.ConnectionString;
         public FormAddCustomer()
         {
             InitializeComponent();

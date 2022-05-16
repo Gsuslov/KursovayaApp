@@ -14,7 +14,7 @@ namespace WindowsFormsApp2
 {
     public partial class FormTicket : Form
     {
-        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public string ConnectionString = Program.ConnectionString;
         public DataClassesDataContext dc;
         public FormTicket()
         {

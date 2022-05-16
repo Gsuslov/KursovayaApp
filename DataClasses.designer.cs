@@ -22,7 +22,7 @@ namespace WindowsFormsApp2
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="C:\\USERS\\ГЕОРГИЙ\\SOURCE\\REPOS\\KURSOVAYA\\KURSOVAYA\\DATABASE1.MDF")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DATABASE1.MDF")]
 	public partial class DataClassesDataContext : System.Data.Linq.DataContext
 	{
 		

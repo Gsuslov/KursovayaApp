@@ -8,14 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.IO;
 
 namespace WindowsFormsApp2
 {
 
     public partial class FormSchedule : Form
     {
-        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public string ConnectionString = Program.ConnectionString;
+
         public DataClassesDataContext dc;
         public FormSchedule()
         {

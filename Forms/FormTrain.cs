@@ -14,7 +14,7 @@ namespace WindowsFormsApp2
 {
     public partial class TrainForm : Form
     {
-        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\p-sus\Source\Repos\KursovayaApp\Database1.mdf;Integrated Security=True";
         public DataClassesDataContext dc;
         public TrainForm()
         {

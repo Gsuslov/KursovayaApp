@@ -19,7 +19,7 @@ namespace WindowsFormsApp2
             dc = new DataClassesDataContext(ConnectionString);
             
         }
-        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Documents\GitHub\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public string ConnectionString = Program.ConnectionString;
         public DataClassesDataContext dc;
         private void поездаToolStripMenuItem_Click(object sender, EventArgs e)
         {
