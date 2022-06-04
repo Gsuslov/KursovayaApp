@@ -18,12 +18,12 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             dc = new DataClassesDataContext(ConnectionString);
-            var Schedules = dc.ExecuteQuery<Schedule>(@"select * from Schedule where Departure > '{0}'", dateTimePicker1.Value);
+            var Schedules = dc.ExecuteQuery<Schedule>(@"select * from Schedule where Departure > '{0}'", dateTimePicker1.Value.ToString("dd.MM.yyyy"));
 
             foreach (Schedule sched in Schedules)
             {
-                //comboBox4.Items.Add(sched.WhereFrom);
-                //comboBox3.Items.Add(sched.Whiter);
+                comboBox4.Items.Add(sched.WhereFrom);
+                comboBox3.Items.Add(sched.Whiter);
             }
         }
 

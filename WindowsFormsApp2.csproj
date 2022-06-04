@@ -156,6 +156,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Forms\FormAddSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddSchedule.Designer.cs">
+      <DependentUpon>FormAddSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddTrain.Designer.cs">
+      <DependentUpon>FormAddTrain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +234,12 @@
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Forms\FormAddSchedule.resx">
+      <DependentUpon>FormAddSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddTrain.resx">
+      <DependentUpon>FormAddTrain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>

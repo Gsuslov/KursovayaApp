@@ -18,6 +18,15 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             dc = new DataClassesDataContext(ConnectionString);
+            this.Activated += FormPassanger_Activated;
+        }
+
+        private void FormPassanger_Activated(object sender, EventArgs e)
+        {
+            dc = new DataClassesDataContext(ConnectionString);
+            dataGridView1.DataSource = dc.Passanger;
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

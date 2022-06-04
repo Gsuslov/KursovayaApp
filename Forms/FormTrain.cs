@@ -14,12 +14,21 @@ namespace WindowsFormsApp2
 {
     public partial class TrainForm : Form
     {
-        public const string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\p-sus\Source\Repos\KursovayaApp\Database1.mdf;Integrated Security=True";
+        public string ConnectionString = Program.ConnectionString;
         public DataClassesDataContext dc;
         public TrainForm()
         {
             InitializeComponent();
             dc = new DataClassesDataContext(ConnectionString);
+            this.Activated += TrainForm_Activated;
+        }
+
+        private void TrainForm_Activated(object sender, EventArgs e)
+        {
+            dc = new DataClassesDataContext(ConnectionString);
+            dataGridView1.DataSource = dc.TRAINS;
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
 
         private void fKToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,6 +221,12 @@ namespace WindowsFormsApp2
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            FormAddTrain FaddTrain = new FormAddTrain();
+            FaddTrain.ShowDialog();
         }
     }
 }

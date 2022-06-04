@@ -22,8 +22,16 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             dc = new DataClassesDataContext(ConnectionString);
+            this.Activated += FormSchedule_Activated;
         }
-       
+
+        private void FormSchedule_Activated(object sender, EventArgs e)
+        {
+            dc = new DataClassesDataContext(ConnectionString);
+            bindingSource1.DataSource = dc.Schedule;
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+        }
 
         private void рассписаниеToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -47,6 +55,7 @@ namespace WindowsFormsApp2
             bindingSource1.DataSource = dc.Schedule;
         }
 
+
         private void билетНаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTicket FTicket = new FormTicket();
@@ -66,6 +75,12 @@ namespace WindowsFormsApp2
         private void оформитьЗаказToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormAddSchedule FaddSched = new FormAddSchedule();
+            FaddSched.ShowDialog();
         }
     }
 }

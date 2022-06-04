@@ -64,6 +64,7 @@ namespace WindowsFormsApp2
             };
             dc.Passanger.InsertOnSubmit(P);
             dc.SubmitChanges();
+            Close();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
