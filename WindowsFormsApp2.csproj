@@ -156,6 +156,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Forms\FormOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOrder.Designer.cs">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddPassanger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Forms\FormOrder.resx">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddPassanger.resx">
       <DependentUpon>FormAddPassanger.cs</DependentUpon>
     </EmbeddedResource>

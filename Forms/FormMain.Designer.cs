@@ -40,20 +40,21 @@ namespace WindowsFormsApp2
             this.масштабToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.полноэкранныйРежимToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дефолтныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.логиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customButton6 = new WindowsFormsApp2.Clauses.CustomButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.customButton8 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton7 = new WindowsFormsApp2.Clauses.CustomButton();
-            this.customButton6 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton5 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton4 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton3 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton2 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton1 = new WindowsFormsApp2.Clauses.CustomButton();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.логиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оформлениеБилетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,8 +72,7 @@ namespace WindowsFormsApp2
             this.настройкиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1323, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(992, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,17 +81,18 @@ namespace WindowsFormsApp2
             this.справочнаяИнформацияToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("справочнаяИнформацияToolStripMenuItem.BackgroundImage")));
             this.справочнаяИнформацияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.поездаToolStripMenuItem,
-            this.рассписаниеToolStripMenuItem});
+            this.рассписаниеToolStripMenuItem,
+            this.оформлениеБилетаToolStripMenuItem});
             this.справочнаяИнформацияToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.справочнаяИнформацияToolStripMenuItem.Name = "справочнаяИнформацияToolStripMenuItem";
-            this.справочнаяИнформацияToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
+            this.справочнаяИнформацияToolStripMenuItem.Size = new System.Drawing.Size(161, 20);
             this.справочнаяИнформацияToolStripMenuItem.Text = "Справочная информация";
             // 
             // поездаToolStripMenuItem
             // 
             this.поездаToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.поездаToolStripMenuItem.Name = "поездаToolStripMenuItem";
-            this.поездаToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.поездаToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.поездаToolStripMenuItem.Text = "Поезда";
             this.поездаToolStripMenuItem.Click += new System.EventHandler(this.поездаToolStripMenuItem_Click);
             // 
@@ -99,7 +100,7 @@ namespace WindowsFormsApp2
             // 
             this.рассписаниеToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.рассписаниеToolStripMenuItem.Name = "рассписаниеToolStripMenuItem";
-            this.рассписаниеToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.рассписаниеToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.рассписаниеToolStripMenuItem.Text = "Расписание";
             this.рассписаниеToolStripMenuItem.Click += new System.EventHandler(this.рассписаниеToolStripMenuItem_Click);
             // 
@@ -112,7 +113,7 @@ namespace WindowsFormsApp2
             this.просмотрToolStripMenuItem});
             this.справкаToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
             this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
@@ -121,7 +122,7 @@ namespace WindowsFormsApp2
             this.сведеньяОбАвтореToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.сведеньяОбАвтореToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.сведеньяОбАвтореToolStripMenuItem.Name = "сведеньяОбАвтореToolStripMenuItem";
-            this.сведеньяОбАвтореToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.сведеньяОбАвтореToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.сведеньяОбАвтореToolStripMenuItem.Text = "Сведения о программе";
             this.сведеньяОбАвтореToolStripMenuItem.Click += new System.EventHandler(this.сведеньяОбАвтореToolStripMenuItem_Click);
             // 
@@ -130,7 +131,7 @@ namespace WindowsFormsApp2
             this.просмотрToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.просмотрToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.просмотрToolStripMenuItem.Name = "просмотрToolStripMenuItem";
-            this.просмотрToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.просмотрToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.просмотрToolStripMenuItem.Text = "Сведения об авторе";
             this.просмотрToolStripMenuItem.Click += new System.EventHandler(this.просмотрToolStripMenuItem_Click);
             // 
@@ -142,23 +143,39 @@ namespace WindowsFormsApp2
             this.дефолтныйToolStripMenuItem});
             this.масштабToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.масштабToolStripMenuItem.Name = "масштабToolStripMenuItem";
-            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.масштабToolStripMenuItem.Text = "Масштаб";
             this.масштабToolStripMenuItem.Click += new System.EventHandler(this.масштабToolStripMenuItem_Click);
             // 
             // полноэкранныйРежимToolStripMenuItem
             // 
             this.полноэкранныйРежимToolStripMenuItem.Name = "полноэкранныйРежимToolStripMenuItem";
-            this.полноэкранныйРежимToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.полноэкранныйРежимToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.полноэкранныйРежимToolStripMenuItem.Text = "Полноэкранный режим";
             this.полноэкранныйРежимToolStripMenuItem.Click += new System.EventHandler(this.полноэкранныйРежимToolStripMenuItem_Click);
             // 
             // дефолтныйToolStripMenuItem
             // 
             this.дефолтныйToolStripMenuItem.Name = "дефолтныйToolStripMenuItem";
-            this.дефолтныйToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.дефолтныйToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.дефолтныйToolStripMenuItem.Text = "Дефолтный";
             this.дефолтныйToolStripMenuItem.Click += new System.EventHandler(this.дефолтныйToolStripMenuItem_Click);
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.логиToolStripMenuItem});
+            this.настройкиToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // логиToolStripMenuItem
+            // 
+            this.логиToolStripMenuItem.Name = "логиToolStripMenuItem";
+            this.логиToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.логиToolStripMenuItem.Text = "Логи";
             // 
             // eventLog1
             // 
@@ -171,10 +188,9 @@ namespace WindowsFormsApp2
             this.listView1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView1.BackgroundImage")));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(-15, 33);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Location = new System.Drawing.Point(-11, 27);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(309, 641);
+            this.listView1.Size = new System.Drawing.Size(232, 521);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -185,27 +201,40 @@ namespace WindowsFormsApp2
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.customButton6);
             this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Location = new System.Drawing.Point(1153, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(865, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(169, 641);
+            this.panel1.Size = new System.Drawing.Size(127, 521);
             this.panel1.TabIndex = 12;
+            // 
+            // customButton6
+            // 
+            this.customButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.customButton6.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton6.BackgroundImage")));
+            this.customButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.customButton6.FlatAppearance.BorderSize = 0;
+            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton6.ForeColor = System.Drawing.Color.Black;
+            this.customButton6.Location = new System.Drawing.Point(18, 414);
+            this.customButton6.Name = "customButton6";
+            this.customButton6.Size = new System.Drawing.Size(88, 80);
+            this.customButton6.TabIndex = 1;
+            this.customButton6.UseVisualStyleBackColor = false;
+            this.customButton6.Click += new System.EventHandler(this.customButton6_Click);
             // 
             // listBox1
             // 
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
             this.listBox1.Items.AddRange(new object[] {
             "Данное приложение",
             "направлено на ",
             "просмотр справочной",
             "информации по теме",
             "Ж/Д перевозки"});
-            this.listBox1.Location = new System.Drawing.Point(4, 10);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Location = new System.Drawing.Point(3, 8);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(159, 196);
+            this.listBox1.Size = new System.Drawing.Size(120, 160);
             this.listBox1.TabIndex = 0;
             // 
             // customButton8
@@ -214,10 +243,9 @@ namespace WindowsFormsApp2
             this.customButton8.FlatAppearance.BorderSize = 0;
             this.customButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton8.ForeColor = System.Drawing.Color.White;
-            this.customButton8.Location = new System.Drawing.Point(0, 583);
-            this.customButton8.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton8.Location = new System.Drawing.Point(0, 474);
             this.customButton8.Name = "customButton8";
-            this.customButton8.Size = new System.Drawing.Size(295, 62);
+            this.customButton8.Size = new System.Drawing.Size(221, 50);
             this.customButton8.TabIndex = 14;
             this.customButton8.Text = "Список билетов";
             this.customButton8.UseVisualStyleBackColor = false;
@@ -229,31 +257,13 @@ namespace WindowsFormsApp2
             this.customButton7.FlatAppearance.BorderSize = 0;
             this.customButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton7.ForeColor = System.Drawing.Color.White;
-            this.customButton7.Location = new System.Drawing.Point(0, 477);
-            this.customButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton7.Location = new System.Drawing.Point(0, 388);
             this.customButton7.Name = "customButton7";
-            this.customButton7.Size = new System.Drawing.Size(295, 62);
+            this.customButton7.Size = new System.Drawing.Size(221, 50);
             this.customButton7.TabIndex = 13;
             this.customButton7.Text = "Список грузов";
             this.customButton7.UseVisualStyleBackColor = false;
             this.customButton7.Click += new System.EventHandler(this.customButton7_Click);
-            // 
-            // customButton6
-            // 
-            this.customButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton6.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton6.BackgroundImage")));
-            this.customButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton6.FlatAppearance.BorderSize = 0;
-            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton6.ForeColor = System.Drawing.Color.Black;
-            this.customButton6.Location = new System.Drawing.Point(24, 510);
-            this.customButton6.Margin = new System.Windows.Forms.Padding(4);
-            this.customButton6.Name = "customButton6";
-            this.customButton6.Size = new System.Drawing.Size(117, 98);
-            this.customButton6.TabIndex = 1;
-            this.customButton6.UseVisualStyleBackColor = false;
-            this.customButton6.Click += new System.EventHandler(this.customButton6_Click);
             // 
             // customButton5
             // 
@@ -262,10 +272,9 @@ namespace WindowsFormsApp2
             this.customButton5.FlatAppearance.BorderSize = 0;
             this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton5.ForeColor = System.Drawing.Color.White;
-            this.customButton5.Location = new System.Drawing.Point(1199, 0);
-            this.customButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton5.Location = new System.Drawing.Point(899, 0);
             this.customButton5.Name = "customButton5";
-            this.customButton5.Size = new System.Drawing.Size(124, 30);
+            this.customButton5.Size = new System.Drawing.Size(93, 24);
             this.customButton5.TabIndex = 11;
             this.customButton5.Text = "Выход";
             this.customButton5.UseVisualStyleBackColor = false;
@@ -277,10 +286,9 @@ namespace WindowsFormsApp2
             this.customButton4.FlatAppearance.BorderSize = 0;
             this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton4.ForeColor = System.Drawing.Color.White;
-            this.customButton4.Location = new System.Drawing.Point(0, 378);
-            this.customButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton4.Location = new System.Drawing.Point(0, 307);
             this.customButton4.Name = "customButton4";
-            this.customButton4.Size = new System.Drawing.Size(295, 62);
+            this.customButton4.Size = new System.Drawing.Size(221, 50);
             this.customButton4.TabIndex = 10;
             this.customButton4.Text = "Список пассажиров";
             this.customButton4.UseVisualStyleBackColor = false;
@@ -292,10 +300,9 @@ namespace WindowsFormsApp2
             this.customButton3.FlatAppearance.BorderSize = 0;
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton3.ForeColor = System.Drawing.Color.White;
-            this.customButton3.Location = new System.Drawing.Point(0, 279);
-            this.customButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton3.Location = new System.Drawing.Point(0, 227);
             this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(295, 62);
+            this.customButton3.Size = new System.Drawing.Size(221, 50);
             this.customButton3.TabIndex = 9;
             this.customButton3.Text = "Список заказчиков";
             this.customButton3.UseVisualStyleBackColor = false;
@@ -308,10 +315,9 @@ namespace WindowsFormsApp2
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(0, 178);
-            this.customButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton2.Location = new System.Drawing.Point(0, 145);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(295, 62);
+            this.customButton2.Size = new System.Drawing.Size(221, 50);
             this.customButton2.TabIndex = 8;
             this.customButton2.Text = "Список поездов\r\n";
             this.customButton2.UseVisualStyleBackColor = false;
@@ -328,39 +334,29 @@ namespace WindowsFormsApp2
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(0, 75);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton1.Location = new System.Drawing.Point(0, 61);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(295, 62);
+            this.customButton1.Size = new System.Drawing.Size(221, 50);
             this.customButton1.TabIndex = 7;
             this.customButton1.Text = "Расписание ";
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
-            // настройкиToolStripMenuItem
+            // оформлениеБилетаToolStripMenuItem
             // 
-            this.настройкиToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.логиToolStripMenuItem});
-            this.настройкиToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
-            // логиToolStripMenuItem
-            // 
-            this.логиToolStripMenuItem.Name = "логиToolStripMenuItem";
-            this.логиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.логиToolStripMenuItem.Text = "Логи";
+            this.оформлениеБилетаToolStripMenuItem.Name = "оформлениеБилетаToolStripMenuItem";
+            this.оформлениеБилетаToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.оформлениеБилетаToolStripMenuItem.Text = "Оформление билета";
+            this.оформлениеБилетаToolStripMenuItem.Click += new System.EventHandler(this.оформлениеБилетаToolStripMenuItem_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1323, 670);
+            this.ClientSize = new System.Drawing.Size(992, 544);
             this.Controls.Add(this.customButton8);
             this.Controls.Add(this.customButton7);
             this.Controls.Add(this.panel1);
@@ -373,7 +369,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "FormMain";
@@ -413,5 +408,6 @@ namespace WindowsFormsApp2
         private Clauses.CustomButton customButton8;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem логиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оформлениеБилетаToolStripMenuItem;
     }
 }

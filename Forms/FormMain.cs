@@ -116,5 +116,11 @@ namespace WindowsFormsApp2
             FormTicket FTicket = new FormTicket();
             FTicket.Show();
         }
+
+        private void оформлениеБилетаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormOrder FOrder = new FormOrder();
+            FOrder.Show();
+        }
     }
 }

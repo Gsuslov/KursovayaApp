@@ -56,12 +56,13 @@ namespace WindowsFormsApp2
         private void customButton2_Click(object sender, EventArgs e)
         {
             DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
-            Passanger P = dc.Passanger.FirstOrDefault(x=> x.Passport == textBox3.Text);
-            dc.Passanger.FirstOrDefault(x => x.DateOfBirth == dateTimePicker1.Value);
-            dc.Passanger.FirstOrDefault(x => x.Phone == numericUpDown1.ToString());
-            dc.Passanger.FirstOrDefault(x => x.FIO == textBox1.Text);
-            if (dc == null)
-                throw new Exception("ПОЛОМАЛО");
+            Passanger P = new Passanger { 
+                Passport = textBox3.Text,
+                DateOfBirth = dateTimePicker1.Value,
+                Phone = numericUpDown1.Text,
+                FIO = textBox1.Text
+            };
+            dc.Passanger.InsertOnSubmit(P);
             dc.SubmitChanges();
         }
 
