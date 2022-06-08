@@ -140,5 +140,37 @@ namespace WindowsFormsApp2
         {
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
         }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            FormAddTicket fAddTicket = new FormAddTicket();
+            fAddTicket.ShowDialog();
+        }
+
+        private void customButton4_Click(object sender, EventArgs e)
+        {
+            int selectedRow = (int)dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value;
+            DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить данную запись?", "Удаление записи", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    
+                    dc = new DataClassesDataContext(ConnectionString);
+                    dc.Ticket.DeleteAllOnSubmit(dc.Ticket.Where(X => X.Id == selectedRow));
+                    dc.SubmitChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: " + ex.Message.ToString());
+                }
+                this.Hide();
+                this.Show();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
     }
 }

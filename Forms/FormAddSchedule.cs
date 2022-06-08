@@ -23,6 +23,7 @@ namespace WindowsFormsApp2
             {
                 comboBox1.Items.Add(train.Id);
             }
+            comboBox1.SelectedIndex = 0;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -48,6 +49,11 @@ namespace WindowsFormsApp2
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAddSchedule_Load(object sender, EventArgs e)
         {
 
         }

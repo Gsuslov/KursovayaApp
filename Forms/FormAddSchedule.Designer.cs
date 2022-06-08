@@ -158,6 +158,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "FormAddSchedule";
             this.Text = "FormAddSchedule";
+            this.Load += new System.EventHandler(this.FormAddSchedule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

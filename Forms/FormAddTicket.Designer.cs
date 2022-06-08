@@ -50,6 +50,7 @@
             this.customButton2.TabIndex = 10;
             this.customButton2.Text = "Отменить";
             this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // customButton1
             // 
@@ -63,6 +64,7 @@
             this.customButton1.TabIndex = 11;
             this.customButton1.Text = "Сохранить";
             this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // comboBox2
             // 
@@ -93,7 +95,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Пассажир";
             // 
@@ -102,7 +104,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Место";
             // 
@@ -111,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 13);
+            this.label1.Size = new System.Drawing.Size(146, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Номер рейса в расписании";
             // 

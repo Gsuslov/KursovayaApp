@@ -50,6 +50,7 @@ namespace WindowsFormsApp2
             };
             dc.TRAINS.InsertOnSubmit(P);
             dc.SubmitChanges();
+            Close();
         }
     }
 }
