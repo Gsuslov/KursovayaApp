@@ -11,7 +11,7 @@ namespace WindowsFormsApp2
     {
         public static string runDir = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
         public static string filePath = Directory.GetParent(Directory.GetParent(runDir).FullName).FullName;
-        public static string ConnectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0}\Database1.mdf;Integrated Security=True", filePath);
+        public static string ConnectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Георгий\Desktop\KursovayaApp\Database1.mdf;Integrated Security=True", filePath);
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

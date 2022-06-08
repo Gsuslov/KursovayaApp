@@ -94,5 +94,45 @@ namespace WindowsFormsApp2
             FormAddCargo FAddCargo = new FormAddCargo();
             FAddCargo.ShowDialog();
         }
+
+        private void поУбываниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[5], ListSortDirection.Ascending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[5], ListSortDirection.Descending);
+        }
     }
 }

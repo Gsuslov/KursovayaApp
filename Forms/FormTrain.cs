@@ -110,17 +110,7 @@ namespace WindowsFormsApp2
 
         private void найтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                    if (dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(toolStripTextBox1.Text))
-                        {
-                            dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-            }
+      
         }
 
         private void toolStripTextBox1_Click_1(object sender, EventArgs e)
@@ -128,35 +118,7 @@ namespace WindowsFormsApp2
 
         }
 
-        private void найтиToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                    if (dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(toolStripTextBox2.Text))
-                        {
-                            dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-            }
-        }
-
-        private void найтиToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                    if (dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(toolStripTextBox3.Text))
-                        {
-                            dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-            }
-        }
+       
 
         private void toolStripTextBox3_Click(object sender, EventArgs e)
         {
@@ -250,5 +212,10 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: "+ex.Message.ToString());
             }
 }
+
+        private void customButton1_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

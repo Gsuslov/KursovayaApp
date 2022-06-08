@@ -45,7 +45,7 @@
             this.checkBox1.Location = new System.Drawing.Point(44, 204);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(132, 17);
+            this.checkBox1.Size = new System.Drawing.Size(137, 17);
             this.checkBox1.TabIndex = 30;
             this.checkBox1.Text = "Подтвердить платеж";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@
             this.label5.Location = new System.Drawing.Point(41, 56);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 29;
             this.label5.Text = "ФИО";
             // 
@@ -72,9 +72,9 @@
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(179, 264);
+            this.customButton2.Location = new System.Drawing.Point(176, 258);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(130, 44);
+            this.customButton2.Size = new System.Drawing.Size(114, 44);
             this.customButton2.TabIndex = 28;
             this.customButton2.Text = "Сохранить";
             this.customButton2.UseVisualStyleBackColor = false;
@@ -92,9 +92,9 @@
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(12, 264);
+            this.customButton1.Location = new System.Drawing.Point(44, 258);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(130, 44);
+            this.customButton1.Size = new System.Drawing.Size(116, 44);
             this.customButton1.TabIndex = 27;
             this.customButton1.Text = "Назад";
             this.customButton1.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@
             this.label3.Location = new System.Drawing.Point(41, 189);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "Платеж";
             // 
@@ -135,7 +135,7 @@
             this.textBox2.Location = new System.Drawing.Point(44, 142);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 20);
+            this.textBox2.Size = new System.Drawing.Size(246, 22);
             this.textBox2.TabIndex = 23;
             // 
             // textBox1
@@ -145,14 +145,14 @@
             this.textBox1.Location = new System.Drawing.Point(44, 82);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 20);
+            this.textBox1.Size = new System.Drawing.Size(246, 22);
             this.textBox1.TabIndex = 22;
             // 
             // FormEditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 371);
+            this.ClientSize = new System.Drawing.Size(327, 325);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.customButton2);

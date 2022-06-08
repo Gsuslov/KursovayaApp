@@ -31,22 +31,13 @@ namespace WindowsFormsApp2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.справочнаяИнформацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поездаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.рассписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сведеньяОбАвтореToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.просмотрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.масштабToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.полноэкранныйРежимToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дефолтныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.логиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.customButton6 = new WindowsFormsApp2.Clauses.CustomButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.customButton8 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton7 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton5 = new WindowsFormsApp2.Clauses.CustomButton();
@@ -54,7 +45,6 @@ namespace WindowsFormsApp2
             this.customButton3 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton2 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton1 = new WindowsFormsApp2.Clauses.CustomButton();
-            this.оформлениеБилетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,74 +56,12 @@ namespace WindowsFormsApp2
             this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.справочнаяИнформацияToolStripMenuItem,
-            this.справкаToolStripMenuItem,
-            this.масштабToolStripMenuItem,
-            this.настройкиToolStripMenuItem});
+            this.масштабToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(992, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // справочнаяИнформацияToolStripMenuItem
-            // 
-            this.справочнаяИнформацияToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("справочнаяИнформацияToolStripMenuItem.BackgroundImage")));
-            this.справочнаяИнформацияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поездаToolStripMenuItem,
-            this.рассписаниеToolStripMenuItem,
-            this.оформлениеБилетаToolStripMenuItem});
-            this.справочнаяИнформацияToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.справочнаяИнформацияToolStripMenuItem.Name = "справочнаяИнформацияToolStripMenuItem";
-            this.справочнаяИнформацияToolStripMenuItem.Size = new System.Drawing.Size(161, 20);
-            this.справочнаяИнформацияToolStripMenuItem.Text = "Справочная информация";
-            // 
-            // поездаToolStripMenuItem
-            // 
-            this.поездаToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.поездаToolStripMenuItem.Name = "поездаToolStripMenuItem";
-            this.поездаToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.поездаToolStripMenuItem.Text = "Поезда";
-            this.поездаToolStripMenuItem.Click += new System.EventHandler(this.поездаToolStripMenuItem_Click);
-            // 
-            // рассписаниеToolStripMenuItem
-            // 
-            this.рассписаниеToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.рассписаниеToolStripMenuItem.Name = "рассписаниеToolStripMenuItem";
-            this.рассписаниеToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.рассписаниеToolStripMenuItem.Text = "Расписание";
-            this.рассписаниеToolStripMenuItem.Click += new System.EventHandler(this.рассписаниеToolStripMenuItem_Click);
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.справкаToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("справкаToolStripMenuItem.BackgroundImage")));
-            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сведеньяОбАвтореToolStripMenuItem,
-            this.просмотрToolStripMenuItem});
-            this.справкаToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
-            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
-            // 
-            // сведеньяОбАвтореToolStripMenuItem
-            // 
-            this.сведеньяОбАвтореToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.сведеньяОбАвтореToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.сведеньяОбАвтореToolStripMenuItem.Name = "сведеньяОбАвтореToolStripMenuItem";
-            this.сведеньяОбАвтореToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.сведеньяОбАвтореToolStripMenuItem.Text = "Сведения о программе";
-            this.сведеньяОбАвтореToolStripMenuItem.Click += new System.EventHandler(this.сведеньяОбАвтореToolStripMenuItem_Click);
-            // 
-            // просмотрToolStripMenuItem
-            // 
-            this.просмотрToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.просмотрToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.просмотрToolStripMenuItem.Name = "просмотрToolStripMenuItem";
-            this.просмотрToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.просмотрToolStripMenuItem.Text = "Сведения об авторе";
-            this.просмотрToolStripMenuItem.Click += new System.EventHandler(this.просмотрToolStripMenuItem_Click);
             // 
             // масштабToolStripMenuItem
             // 
@@ -143,39 +71,23 @@ namespace WindowsFormsApp2
             this.дефолтныйToolStripMenuItem});
             this.масштабToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.масштабToolStripMenuItem.Name = "масштабToolStripMenuItem";
-            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.масштабToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.масштабToolStripMenuItem.Text = "Масштаб";
             this.масштабToolStripMenuItem.Click += new System.EventHandler(this.масштабToolStripMenuItem_Click);
             // 
             // полноэкранныйРежимToolStripMenuItem
             // 
             this.полноэкранныйРежимToolStripMenuItem.Name = "полноэкранныйРежимToolStripMenuItem";
-            this.полноэкранныйРежимToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.полноэкранныйРежимToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.полноэкранныйРежимToolStripMenuItem.Text = "Полноэкранный режим";
             this.полноэкранныйРежимToolStripMenuItem.Click += new System.EventHandler(this.полноэкранныйРежимToolStripMenuItem_Click);
             // 
             // дефолтныйToolStripMenuItem
             // 
             this.дефолтныйToolStripMenuItem.Name = "дефолтныйToolStripMenuItem";
-            this.дефолтныйToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.дефолтныйToolStripMenuItem.Text = "Дефолтный";
+            this.дефолтныйToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.дефолтныйToolStripMenuItem.Text = "Оконный режим";
             this.дефолтныйToolStripMenuItem.Click += new System.EventHandler(this.дефолтныйToolStripMenuItem_Click);
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.логиToolStripMenuItem});
-            this.настройкиToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
-            // логиToolStripMenuItem
-            // 
-            this.логиToolStripMenuItem.Name = "логиToolStripMenuItem";
-            this.логиToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.логиToolStripMenuItem.Text = "Логи";
             // 
             // eventLog1
             // 
@@ -200,7 +112,6 @@ namespace WindowsFormsApp2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.customButton6);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(865, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(127, 521);
@@ -221,21 +132,6 @@ namespace WindowsFormsApp2
             this.customButton6.TabIndex = 1;
             this.customButton6.UseVisualStyleBackColor = false;
             this.customButton6.Click += new System.EventHandler(this.customButton6_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Данное приложение",
-            "направлено на ",
-            "просмотр справочной",
-            "информации по теме",
-            "Ж/Д перевозки"});
-            this.listBox1.Location = new System.Drawing.Point(3, 8);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 160);
-            this.listBox1.TabIndex = 0;
             // 
             // customButton8
             // 
@@ -342,13 +238,6 @@ namespace WindowsFormsApp2
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
-            // оформлениеБилетаToolStripMenuItem
-            // 
-            this.оформлениеБилетаToolStripMenuItem.Name = "оформлениеБилетаToolStripMenuItem";
-            this.оформлениеБилетаToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.оформлениеБилетаToolStripMenuItem.Text = "Оформление билета";
-            this.оформлениеБилетаToolStripMenuItem.Click += new System.EventHandler(this.оформлениеБилетаToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,17 +274,10 @@ namespace WindowsFormsApp2
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem справочнаяИнформацияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поездаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem рассписаниеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сведеньяОбАвтореToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem просмотрToolStripMenuItem;
         private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.ListView listView1;
         private Clauses.CustomButton customButton1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox listBox1;
         private Clauses.CustomButton customButton5;
         private Clauses.CustomButton customButton4;
         private Clauses.CustomButton customButton3;
@@ -406,8 +288,5 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem дефолтныйToolStripMenuItem;
         private Clauses.CustomButton customButton7;
         private Clauses.CustomButton customButton8;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem логиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оформлениеБилетаToolStripMenuItem;
     }
 }

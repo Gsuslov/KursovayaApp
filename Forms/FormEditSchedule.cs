@@ -61,5 +61,21 @@ namespace WindowsFormsApp2
             dc.SubmitChanges();
             Close();
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
+            var userId = dc.ExecuteQuery<Schedule>(@"select * from Schedule where Id = {0}", scheduleId);
+            foreach (Schedule sched in userId)
+            {
+                sched.Train_Id = Convert.ToInt32(textBox3.Text.ToString());
+                sched.Departure = dateTimePicker1.Value;
+                sched.ArrivalTime = dateTimePicker2.Value;
+                sched.Whiter = textBox2.Text;
+                sched.WhereFrom = textBox1.Text;
+            }
+            dc.SubmitChanges();
+            Close();
+        }
     }
 }

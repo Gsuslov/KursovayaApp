@@ -39,5 +39,17 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
+            TRAINS P = new TRAINS
+            {
+                Type = groupBox1.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text,
+                AllPlaces = (int?)numericUpDown1.Value
+            };
+            dc.TRAINS.InsertOnSubmit(P);
+            dc.SubmitChanges();
+        }
     }
 }

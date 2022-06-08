@@ -51,9 +51,9 @@ namespace WindowsFormsApp2
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(180, 275);
+            this.customButton2.Location = new System.Drawing.Point(170, 238);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(130, 44);
+            this.customButton2.Size = new System.Drawing.Size(119, 44);
             this.customButton2.TabIndex = 19;
             this.customButton2.Text = "Сохранить";
             this.customButton2.UseVisualStyleBackColor = false;
@@ -70,9 +70,9 @@ namespace WindowsFormsApp2
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(12, 275);
+            this.customButton1.Location = new System.Drawing.Point(24, 238);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(130, 44);
+            this.customButton1.Size = new System.Drawing.Size(119, 44);
             this.customButton1.TabIndex = 18;
             this.customButton1.Text = "Назад";
             this.customButton1.UseVisualStyleBackColor = false;
@@ -84,7 +84,7 @@ namespace WindowsFormsApp2
             this.label3.Location = new System.Drawing.Point(31, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Платеж";
             // 
@@ -112,7 +112,7 @@ namespace WindowsFormsApp2
             this.textBox2.Location = new System.Drawing.Point(24, 102);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 20);
+            this.textBox2.Size = new System.Drawing.Size(265, 22);
             this.textBox2.TabIndex = 11;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -121,7 +121,7 @@ namespace WindowsFormsApp2
             this.textBox1.Location = new System.Drawing.Point(24, 43);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 20);
+            this.textBox1.Size = new System.Drawing.Size(265, 22);
             this.textBox1.TabIndex = 10;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -131,7 +131,7 @@ namespace WindowsFormsApp2
             this.label5.Location = new System.Drawing.Point(31, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "ФИО";
             // 
@@ -141,7 +141,7 @@ namespace WindowsFormsApp2
             this.checkBox1.Location = new System.Drawing.Point(34, 183);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(132, 17);
+            this.checkBox1.Size = new System.Drawing.Size(137, 17);
             this.checkBox1.TabIndex = 21;
             this.checkBox1.Text = "Подтвердить платеж";
             this.checkBox1.UseVisualStyleBackColor = true;

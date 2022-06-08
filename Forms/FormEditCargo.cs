@@ -68,5 +68,27 @@ namespace WindowsFormsApp2
             dc.SubmitChanges();
             Close();
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
+            var Cargos = dc.ExecuteQuery<Cargo>(@"select * from Cargo where Id = {0}", cargoId);
+            foreach (Cargo cargo in Cargos)
+            {
+                cargo.CargoName = textBox1.Text;
+                cargo.Weight = (short?)numericUpDown1.Value;
+                cargo.CargoPlace = (short?)numericUpDown2.Value;
+                cargo.Schedule_Id = (short?)numericUpDown3.Value;
+                cargo.FlightNumber = (short?)numericUpDown4.Value;
+                cargo.Customer_Id = (short?)numericUpDown5.Value;
+            }
+            dc.SubmitChanges();
+            Close();
+        }
     }
 }

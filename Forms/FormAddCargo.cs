@@ -73,5 +73,21 @@ namespace WindowsFormsApp2
             dc.Cargo.InsertOnSubmit(P);
             dc.SubmitChanges();
         }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
+            Cargo P = new Cargo
+            {
+                Weight = (short?)numericUpDown1.Value,
+                CargoPlace = (short?)numericUpDown2.Value,
+                FlightNumber = (short?)numericUpDown4.Value,
+                CargoName = textBox1.Text,
+                Schedule_Id = Convert.ToInt32(comboBox1.SelectedItem),
+                Customer_Id = Convert.ToInt32(comboBox2.SelectedItem)
+            };
+            dc.Cargo.InsertOnSubmit(P);
+            dc.SubmitChanges();
+        }
     }
 }

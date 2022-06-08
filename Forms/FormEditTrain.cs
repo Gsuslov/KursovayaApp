@@ -61,5 +61,23 @@ namespace WindowsFormsApp2
             dc.SubmitChanges();
             Close();
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
+            var trains = dc.ExecuteQuery<TRAINS>(@"select * from TRAINS where Id = {0}", trainID);
+            foreach (TRAINS tr in trains)
+            {
+                tr.AllPlaces = (short?)numericUpDown1.Value;
+                tr.Type = groupBox1.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+            }
+            dc.SubmitChanges();
+            Close();
+        }
     }
 }

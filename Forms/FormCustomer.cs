@@ -112,5 +112,45 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void поВозрастаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Ascending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+        }
+
+        private void customButton8_Click(object sender, EventArgs e)
+        {
+            {
+                FormAddCustomer FaddCust = new FormAddCustomer();
+                FaddCust.ShowDialog();
+            }
+
+        }
+
+        private void customButton7_Click(object sender, EventArgs e)
+        {
+            FormEditCustomer formEditCustomer = new FormEditCustomer((int)dataGridView1.SelectedCells[0].Value);
+            formEditCustomer.ShowDialog();
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

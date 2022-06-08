@@ -115,5 +115,84 @@ namespace WindowsFormsApp2
             textBox1.Enabled = checkBox1.Checked;
             customButton1.Enabled = checkBox1.Checked;
         }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            FormAddSchedule FaddSched = new FormAddSchedule();
+            FaddSched.ShowDialog();
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormEditSchedule formEditSchedule = new FormEditSchedule((int)dataGridView1.SelectedCells[0].Value);
+                formEditSchedule.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: " + ex.Message.ToString());
+            }
+        }
+
+        private void customButton4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("dataGridView1.Rows.RemoveAt(item.Index)");
+        }
+
+        private void customButton5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void вПорядкеВозрастанияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void поВозрастаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[4], ListSortDirection.Descending);
+        }
+
+        private void поУбываниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[4], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[5], ListSortDirection.Ascending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[5], ListSortDirection.Descending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+        }
+
+        private void поУбываниюToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Ascending);
+        }
+
+        private void вПорядкеВозрастанияToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void поВозрастаниюToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+        }
+
+        private void поУбываниюToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Ascending);
+        }
     }
 }

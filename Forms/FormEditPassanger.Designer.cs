@@ -43,16 +43,16 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(178, 87);
+            this.dateTimePicker1.Location = new System.Drawing.Point(53, 89);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(213, 22);
             this.dateTimePicker1.TabIndex = 43;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 137);
+            this.label4.Location = new System.Drawing.Point(50, 122);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
@@ -62,10 +62,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 55);
+            this.label5.Location = new System.Drawing.Point(46, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 41;
             this.label5.Text = "ФИО";
             // 
@@ -81,9 +81,9 @@
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(235, 239);
+            this.customButton2.Location = new System.Drawing.Point(169, 239);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(130, 44);
+            this.customButton2.Size = new System.Drawing.Size(107, 44);
             this.customButton2.TabIndex = 40;
             this.customButton2.Text = "Сохранить";
             this.customButton2.UseVisualStyleBackColor = false;
@@ -101,9 +101,9 @@
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(99, 239);
+            this.customButton1.Location = new System.Drawing.Point(45, 239);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(130, 44);
+            this.customButton1.Size = new System.Drawing.Size(107, 44);
             this.customButton1.TabIndex = 39;
             this.customButton1.Text = "Назад";
             this.customButton1.UseVisualStyleBackColor = false;
@@ -111,20 +111,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 186);
+            this.label3.Location = new System.Drawing.Point(50, 171);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 38;
             this.label3.Text = "Паспорт";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 91);
+            this.label2.Location = new System.Drawing.Point(46, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 37;
             this.label2.Text = "Дата рождения";
             // 
@@ -139,33 +139,33 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(178, 186);
+            this.textBox3.Location = new System.Drawing.Point(53, 186);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 20);
+            this.textBox3.Size = new System.Drawing.Size(213, 22);
             this.textBox3.TabIndex = 35;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 55);
+            this.textBox1.Location = new System.Drawing.Point(49, 35);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.Size = new System.Drawing.Size(217, 22);
             this.textBox1.TabIndex = 34;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 134);
+            this.textBox2.Location = new System.Drawing.Point(53, 137);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 20);
+            this.textBox2.Size = new System.Drawing.Size(213, 22);
             this.textBox2.TabIndex = 35;
             // 
             // FormEditPassanger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 295);
+            this.ClientSize = new System.Drawing.Size(309, 295);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);

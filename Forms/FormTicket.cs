@@ -120,5 +120,25 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: "+ex.Message.ToString());
             }
 }
+
+        private void поВозрастаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Descending);
+        }
+
+        private void поУбываниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[2], ListSortDirection.Ascending);
+        }
+
+        private void поУбываниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Ascending);
+        }
+
+        private void поВозрастаниюToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
+        }
     }
 }
