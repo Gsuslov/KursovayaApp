@@ -20,12 +20,22 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             dc = new DataClassesDataContext(ConnectionString);
+            this.Activated += FormTicket_Activated;
         }
 
+        private void FormTicket_Activated(object sender, EventArgs e)
+        {
+            dc = new DataClassesDataContext(ConnectionString);
+            dataGridView1.DataSource = dc.Ticket;
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+        }
         private void FormTicket_Load(object sender, EventArgs e)
         {
 
             bindingSourceTicket.DataSource = dc.Ticket;
+            textBox1.Enabled = false;
+            customButton1.Enabled = false;
             
         }
 
@@ -62,6 +72,21 @@ namespace WindowsFormsApp2
 
         private void customButton1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customButton5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void customButton1_Click_1(object sender, EventArgs e)
+        {
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
                 dataGridView1.Rows[i].Selected = false;
@@ -75,9 +100,25 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Enabled = checkBox1.Checked;
+            customButton1.Enabled = checkBox1.Checked;
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            try {
+                FormEditTicket formEditTicket = new FormEditTicket((int)dataGridView1.SelectedCells[0].Value);
+                formEditTicket.ShowDialog();
+            } catch (Exception ex) {
+                MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: "+ex.Message.ToString());
+            }
+}
     }
 }

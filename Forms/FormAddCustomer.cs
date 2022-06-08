@@ -26,12 +26,16 @@ namespace WindowsFormsApp2
         private void customButton2_Click(object sender, EventArgs e)
         {
             DataClassesDataContext dc = new DataClassesDataContext(ConnectionString);
-            Customer C = dc.Customer.FirstOrDefault(x => x.FIO == textBox1.Text);
-            dc.Customer.FirstOrDefault(x => x.Product == textBox2.Text);
-            dc.Customer.FirstOrDefault(x => x.Payment == checkBox1.Checked);
-            if (C == null)
-                throw new Exception("I have a problem");
+            Customer C = new Customer
+            {
+                FIO = textBox1.Text,
+                Product =textBox2.Text,
+                Payment = checkBox1.Checked
+            };
+            dc.Customer.InsertOnSubmit(C);
             dc.SubmitChanges();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

@@ -46,5 +46,10 @@ namespace WindowsFormsApp2
             DialogResult = DialogResult.OK;
             Close();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

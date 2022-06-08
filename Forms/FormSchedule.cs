@@ -53,6 +53,8 @@ namespace WindowsFormsApp2
         {
            
             bindingSource1.DataSource = dc.Schedule;
+            textBox1.Enabled = false;
+            customButton1.Enabled = false;
         }
 
 
@@ -81,6 +83,37 @@ namespace WindowsFormsApp2
         {
             FormAddSchedule FaddSched = new FormAddSchedule();
             FaddSched.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try { 
+                FormEditSchedule formEditSchedule = new FormEditSchedule((int)dataGridView1.SelectedCells[0].Value);
+                formEditSchedule.ShowDialog();
+            } catch (Exception ex) {
+                MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: "+ex.Message.ToString());
+            }
+}
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            break;
+                        }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox1.Enabled = checkBox1.Checked;
+            customButton1.Enabled = checkBox1.Checked;
         }
     }
 }

@@ -38,8 +38,9 @@ namespace WindowsFormsApp2
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dc.TRAINS;  
-
+            dataGridView1.DataSource = dc.TRAINS;
+            textBox2.Enabled = false;
+            customButton5.Enabled = false;
         }
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
@@ -200,17 +201,7 @@ namespace WindowsFormsApp2
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                    if (dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
-                        {
-                            dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-            }
+       
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -228,5 +219,36 @@ namespace WindowsFormsApp2
             FormAddTrain FaddTrain = new FormAddTrain();
             FaddTrain.ShowDialog();
         }
+
+        private void customButton5_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox2.Text))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            break;
+                        }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Enabled = checkBox1.Checked;
+            customButton5.Enabled = checkBox1.Checked;
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            try {
+                FormEditTrain formEditTrain = new FormEditTrain((int)dataGridView1.SelectedCells[0].Value);
+                formEditTrain.ShowDialog();
+            } catch (Exception ex) {
+                MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: "+ex.Message.ToString());
+            }
+}
     }
 }

@@ -34,5 +34,10 @@ namespace WindowsFormsApp2
             dc.TRAINS.InsertOnSubmit(P);
             dc.SubmitChanges();
         }
+
+        private void FormAddTrain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,7 +57,7 @@
             this.groupBox1.Size = new System.Drawing.Size(146, 68);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Тип поезда";
+            this.groupBox1.Text = "Тип перевозки";
             // 
             // radioButton2
             // 
@@ -66,7 +66,7 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(101, 17);
             this.radioButton2.TabIndex = 0;
-            this.radioButton2.Text = "Пассажирский";
+            this.radioButton2.Text = "Пассажирская";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -79,7 +79,7 @@
             this.radioButton1.Size = new System.Drawing.Size(72, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Грузовой";
+            this.radioButton1.Text = "Грузовая";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
@@ -109,6 +109,7 @@
             this.Controls.Add(this.button1);
             this.Name = "FormAddTrain";
             this.Text = "FormAddTrain";
+            this.Load += new System.EventHandler(this.FormAddTrain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

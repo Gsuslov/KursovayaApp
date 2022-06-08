@@ -47,6 +47,9 @@ namespace WindowsFormsApp2
         private void FormPassanger_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dc.Passanger;
+            textBox1.Enabled = false;
+            customButton1.Enabled = false;
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -59,23 +62,28 @@ namespace WindowsFormsApp2
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            textBox1.Enabled = checkBox1.Checked;
+            customButton1.Enabled = checkBox1.Checked;
+             
         }
 
         private void customButton1_Click(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                    if (dataGridView1.Rows[i].Cells[j].Value != null)
-                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
-                        {
-                            dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-            }
+            //for (int i = 0; i < dataGridView1.RowCount; i++)
+            //{
+            //    dataGridView1.Rows[i].Selected = false;
+            //    for (int j = 0; j < dataGridView1.ColumnCount; j++)
+            //        if (dataGridView1.Rows[i].Cells[j].Value != null)
+            //            if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+            //            {
+            //                dataGridView1.Rows[i].Selected = true;
+            //                break;
+            //            }
+            //}
+            IQueryable<Passanger> q = dc.Passanger;
+            if (checkBox1.Checked)
+                q = q.Where(x => x.FIO.Contains((string)textBox1.Text));
         }
 
 
@@ -91,8 +99,13 @@ namespace WindowsFormsApp2
 
         private void customButton3_Click(object sender, EventArgs e)
         {
-         
-        }
+            try { 
+                FormEditPassanger FedPass = new FormEditPassanger((int)dataGridView1.SelectedCells[0].Value);
+                FedPass.ShowDialog();
+            } catch (Exception ex) {
+                MessageBox.Show("Выберите ячейку с ID записи для редактирования; Ex: "+ex.Message.ToString());
+            }
+}
 
         private void customButton2_Click(object sender, EventArgs e)
         {
@@ -103,6 +116,16 @@ namespace WindowsFormsApp2
         private void customButton4_Click(object sender, EventArgs e)
         {
           //  dc.Passanger.DeleteAllOnSubmit(dc.Passanger.Where(X=>X.Id == dataGridView1.Rows.Add());
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customButton5_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

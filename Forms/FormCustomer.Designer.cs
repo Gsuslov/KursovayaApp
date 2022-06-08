@@ -51,15 +51,16 @@ namespace WindowsFormsApp2
             this.customButton2 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton3 = new WindowsFormsApp2.Clauses.CustomButton();
             this.customButton4 = new WindowsFormsApp2.Clauses.CustomButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.customButton5 = new WindowsFormsApp2.Clauses.CustomButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.customButton6 = new WindowsFormsApp2.Clauses.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -86,7 +87,7 @@ namespace WindowsFormsApp2
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(848, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(646, 27);
             this.bindingNavigator1.TabIndex = 17;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -97,7 +98,7 @@ namespace WindowsFormsApp2
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -107,7 +108,7 @@ namespace WindowsFormsApp2
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -116,7 +117,7 @@ namespace WindowsFormsApp2
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
@@ -128,8 +129,9 @@ namespace WindowsFormsApp2
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
@@ -144,7 +146,7 @@ namespace WindowsFormsApp2
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -153,7 +155,7 @@ namespace WindowsFormsApp2
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
@@ -163,6 +165,9 @@ namespace WindowsFormsApp2
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -172,12 +177,11 @@ namespace WindowsFormsApp2
             this.productDataGridViewTextBoxColumn,
             this.paymentDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSourceCustomer;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(549, 622);
+            this.dataGridView1.Size = new System.Drawing.Size(412, 505);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -216,6 +220,7 @@ namespace WindowsFormsApp2
             // customButton1
             // 
             this.customButton1.AllowDrop = true;
+            this.customButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.customButton1.AutoSize = true;
             this.customButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -224,10 +229,9 @@ namespace WindowsFormsApp2
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(567, 67);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton1.Location = new System.Drawing.Point(425, 54);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(258, 52);
+            this.customButton1.Size = new System.Drawing.Size(194, 42);
             this.customButton1.TabIndex = 18;
             this.customButton1.Text = "Добавить";
             this.customButton1.UseVisualStyleBackColor = false;
@@ -236,6 +240,7 @@ namespace WindowsFormsApp2
             // customButton2
             // 
             this.customButton2.AllowDrop = true;
+            this.customButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.customButton2.AutoSize = true;
             this.customButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -244,10 +249,9 @@ namespace WindowsFormsApp2
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(567, 150);
-            this.customButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton2.Location = new System.Drawing.Point(425, 122);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(258, 52);
+            this.customButton2.Size = new System.Drawing.Size(194, 42);
             this.customButton2.TabIndex = 19;
             this.customButton2.Text = "Редактировать";
             this.customButton2.UseVisualStyleBackColor = false;
@@ -256,6 +260,7 @@ namespace WindowsFormsApp2
             // customButton3
             // 
             this.customButton3.AllowDrop = true;
+            this.customButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.customButton3.AutoSize = true;
             this.customButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -264,10 +269,9 @@ namespace WindowsFormsApp2
             this.customButton3.FlatAppearance.BorderSize = 0;
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton3.ForeColor = System.Drawing.Color.White;
-            this.customButton3.Location = new System.Drawing.Point(567, 241);
-            this.customButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton3.Location = new System.Drawing.Point(425, 196);
             this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(258, 52);
+            this.customButton3.Size = new System.Drawing.Size(194, 42);
             this.customButton3.TabIndex = 20;
             this.customButton3.Text = "Удалить";
             this.customButton3.UseVisualStyleBackColor = false;
@@ -275,6 +279,7 @@ namespace WindowsFormsApp2
             // customButton4
             // 
             this.customButton4.AllowDrop = true;
+            this.customButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.customButton4.AutoSize = true;
             this.customButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.customButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -283,76 +288,85 @@ namespace WindowsFormsApp2
             this.customButton4.FlatAppearance.BorderSize = 0;
             this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton4.ForeColor = System.Drawing.Color.White;
-            this.customButton4.Location = new System.Drawing.Point(567, 463);
-            this.customButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton4.Location = new System.Drawing.Point(430, 477);
             this.customButton4.Name = "customButton4";
-            this.customButton4.Size = new System.Drawing.Size(258, 52);
+            this.customButton4.Size = new System.Drawing.Size(194, 42);
             this.customButton4.TabIndex = 21;
             this.customButton4.Text = "Назад";
             this.customButton4.UseVisualStyleBackColor = false;
             this.customButton4.Click += new System.EventHandler(this.customButton4_Click);
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.customButton5);
-            this.panel2.Location = new System.Drawing.Point(567, 317);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 124);
-            this.panel2.TabIndex = 22;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.customButton6);
+            this.panel1.Location = new System.Drawing.Point(430, 268);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(194, 104);
+            this.panel1.TabIndex = 23;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
+            // checkBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(30, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Выберите параметры поиска";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 34);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 22);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(29, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Поиск";
             // 
-            // customButton5
+            // textBox2
             // 
-            this.customButton5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton5.FlatAppearance.BorderSize = 0;
-            this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton5.ForeColor = System.Drawing.Color.White;
-            this.customButton5.Location = new System.Drawing.Point(33, 77);
-            this.customButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.customButton5.Name = "customButton5";
-            this.customButton5.Size = new System.Drawing.Size(191, 33);
-            this.customButton5.TabIndex = 6;
-            this.customButton5.Text = "Поиск";
-            this.customButton5.UseVisualStyleBackColor = false;
-            this.customButton5.Click += new System.EventHandler(this.customButton5_Click);
+            this.textBox2.Location = new System.Drawing.Point(24, 31);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(161, 20);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // customButton6
+            // 
+            this.customButton6.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.customButton6.FlatAppearance.BorderSize = 0;
+            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton6.ForeColor = System.Drawing.Color.White;
+            this.customButton6.Location = new System.Drawing.Point(24, 74);
+            this.customButton6.Name = "customButton6";
+            this.customButton6.Size = new System.Drawing.Size(143, 27);
+            this.customButton6.TabIndex = 6;
+            this.customButton6.Text = "Поиск";
+            this.customButton6.UseVisualStyleBackColor = false;
+            this.customButton6.Click += new System.EventHandler(this.customButton6_Click);
             // 
             // FormCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(848, 699);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(646, 568);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.customButton4);
             this.Controls.Add(this.customButton3);
             this.Controls.Add(this.customButton2);
             this.Controls.Add(this.customButton1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCustomer";
             this.Text = "FormCustomer";
             this.Load += new System.EventHandler(this.FormCustomer_Load);
@@ -361,8 +375,8 @@ namespace WindowsFormsApp2
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,9 +404,10 @@ namespace WindowsFormsApp2
         private Clauses.CustomButton customButton2;
         private Clauses.CustomButton customButton3;
         private Clauses.CustomButton customButton4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private Clauses.CustomButton customButton5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private Clauses.CustomButton customButton6;
     }
 }

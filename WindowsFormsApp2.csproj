@@ -156,17 +156,65 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Forms\FormAddCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddCargo.Designer.cs">
+      <DependentUpon>FormAddCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormAddSchedule.Designer.cs">
       <DependentUpon>FormAddSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormAddTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddTicket.Designer.cs">
+      <DependentUpon>FormAddTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddTrain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormAddTrain.Designer.cs">
       <DependentUpon>FormAddTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditCargo.Designer.cs">
+      <DependentUpon>FormEditCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditCustomer.Designer.cs">
+      <DependentUpon>FormEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditPassanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditPassanger.Designer.cs">
+      <DependentUpon>FormEditPassanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditSchedule.Designer.cs">
+      <DependentUpon>FormEditSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditTicket.Designer.cs">
+      <DependentUpon>FormEditTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditTrain.Designer.cs">
+      <DependentUpon>FormEditTrain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormOrder.cs">
       <SubType>Form</SubType>
@@ -234,11 +282,35 @@
     <None Include="DataClasses.dbml.layout">
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Forms\FormAddCargo.resx">
+      <DependentUpon>FormAddCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddSchedule.resx">
       <DependentUpon>FormAddSchedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddTicket.resx">
+      <DependentUpon>FormAddTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddTrain.resx">
       <DependentUpon>FormAddTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditCargo.resx">
+      <DependentUpon>FormEditCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditCustomer.resx">
+      <DependentUpon>FormEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditPassanger.resx">
+      <DependentUpon>FormEditPassanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditSchedule.resx">
+      <DependentUpon>FormEditSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditTicket.resx">
+      <DependentUpon>FormEditTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditTrain.resx">
+      <DependentUpon>FormEditTrain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>

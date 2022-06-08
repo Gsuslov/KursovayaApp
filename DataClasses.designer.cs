@@ -1444,6 +1444,7 @@ namespace WindowsFormsApp2
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-	}
+
+    }
 }
 #pragma warning restore 1591
